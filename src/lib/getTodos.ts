@@ -1,4 +1,4 @@
-import { revalidatePath as nextRevalidatePath } from "next/cache";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "./connectDB";
 import { UserModel, TodoModel } from "./models";
 import { auth } from "@/auth";
@@ -12,7 +12,7 @@ export const getTodos = async () => {
 
     const todo = await TodoModel.find({ createdBy: user._id });
 
-    nextRevalidatePath("/todo");
+    revalidatePath("/todo");
     return todo;
   } catch (error: any) {
     throw new Error(error.message || error);

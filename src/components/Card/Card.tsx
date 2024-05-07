@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Card.module.scss";
 import Image from "next/image";
-import { TPokemonType } from "../../../types";
 
 const Card = ({
   pokemon_id,

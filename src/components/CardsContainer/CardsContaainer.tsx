@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./CardsContainer.module.scss";
 import { Card } from "../../components";
-import { TPokemonType } from "../../../types";
 
 const getPokemonData = async ({
   count,
