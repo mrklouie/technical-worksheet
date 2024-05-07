@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { TodoListContainer } from "@/components";
 import styles from "./page.module.scss";
