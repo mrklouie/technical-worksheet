@@ -1,0 +1,11 @@
+@use "@/sass/globals/variables";
+@use "@/sass/globals/mixin";
+
+.todo-item-wrapper {
+  margin-top: 1rem;
+  padding: 1rem;
+
+  border-radius: variables.$rounded-sm;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}

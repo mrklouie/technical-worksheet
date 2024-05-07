@@ -1,0 +1,47 @@
+@use "../../sass/globals/variables";
+
+.card-item-wrapper {
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: variables.$rounded-sm;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+  & > .header {
+    & > span {
+      font-size: variables.getFontSize("md");
+      color: gray;
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+
+  & > .avatar {
+    & > img {
+      display: block;
+      width: 5rem;
+      height: auto;
+      margin-inline: auto;
+    }
+  }
+
+  & > .footer {
+    & > #pokemon-name {
+      font-size: variables.getFontSize("md");
+      text-align: center;
+    }
+
+    & > .pokemon-desc {
+      font-size: variables.getFontSize("sm");
+      text-align: center;
+    }
+  }
+}

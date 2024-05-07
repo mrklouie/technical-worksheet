@@ -1,0 +1,31 @@
+$input-field: #f7f8f9;
+$primary-color: #1e232c;
+
+$rounded-sm: 0.25rem;
+$rounded: 0.5rem;
+$rounded-md: 0.75rem;
+$rounded-lg: 1rem;
+$rounded-full: 50%;
+$red: #a91d36;
+
+$padding: min(85rem, 90%);
+
+$primary-color-pokemon: #7d4de1;
+// $secondar-color:
+
+$font-size: (
+  "sm": 0.75rem,
+  "rg": 1rem,
+  "md": 1.5rem,
+  "lg": 2rem,
+  "xlg": 3rem,
+);
+
+$rounded-sm: 0.25rem;
+$rounded-rg: 1rem;
+$rounded-md: 1.5rem;
+$rounded-full: 50%;
+
+@function getFontSize($size) {
+  @return map-get($font-size, $size);
+}

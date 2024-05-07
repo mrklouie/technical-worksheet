@@ -1,0 +1,39 @@
+@use "@/sass/globals/variables";
+@use "@/sass/globals/mixin";
+
+.technical-worksheet-main-container {
+  width: variables.$padding;
+  margin-inline: auto;
+  & > .header {
+    padding: 5rem 0;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  & > .body {
+    & > ul {
+      list-style-type: none;
+      & > * + * {
+        margin-top: 1rem;
+      }
+      & > li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: variables.$rounded-sm;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+        transition: transform 150ms ease-in-out;
+        transform-origin: center;
+        cursor: pointer;
+        will-change: transform;
+
+        &:hover {
+          transform: scale(0.99);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "@/sass/globals/mixin";
+@use "@/sass/globals/variables";
+
+.todo-item-wrapper {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: variables.$rounded-sm;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+
+  margin-top: 1rem;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+  & > h1 {
+  }
+
+  & > .left {
+  }
+
+  & > .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & > form {
+      & > input {
+        @include mixin.inputField;
+        width: auto;
+      }
+
+      & > button {
+        @include mixin.button;
+        width: auto;
+
+        &#delete {
+          background-color: variables.$red;
+        }
+      }
+    }
+    & > a {
+      & > button {
+        @include mixin.button;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .todo-item-wrapper {
+    display: flex;
+
+    & > * + * {
+      margin-top: unset;
+    }
+
+    & > h1 {
+    }
+
+    & > .left {
+    }
+
+    & > .right {
+      & > form {
+        & > input {
+        }
+
+        & > button {
+          &#delete {
+          }
+        }
+      }
+      & > a {
+        & > button {
+        }
+      }
+    }
+  }
+}

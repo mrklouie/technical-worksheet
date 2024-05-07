@@ -1,0 +1,17 @@
+@use "@/sass/globals/variables";
+@use "@/sass/globals/mixin";
+
+.calculator-container {
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  gap: 1rem;
+  & > input {
+    @include mixin.inputField;
+    width: 100%;
+    display: block;
+  }
+
+  & > .answer {
+  }
+}

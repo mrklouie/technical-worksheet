@@ -1,0 +1,15 @@
+.form-alert-container {
+  margin-top: 1rem;
+  &__contents {
+    text-align: center;
+    #alert-message {
+      &.danger {
+        color: red;
+      }
+
+      &.success {
+        color: darkorchid;
+      }
+    }
+  }
+}

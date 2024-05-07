@@ -1,0 +1,29 @@
+@use "./variables";
+
+@mixin inputField {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #f1f4f9;
+  background-color: variables.$input-field;
+  border-radius: variables.$rounded;
+}
+
+@mixin button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: variables.$rounded;
+  background-color: variables.$primary-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 125ms ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

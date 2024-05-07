@@ -1,0 +1,19 @@
+@use "../../sass/globals/variables";
+
+.header-container {
+  &__wrapper {
+  }
+
+  &__contents {
+    background-color: variables.$primary-color-pokemon;
+    padding: 5em 0;
+
+    & > img {
+      display: block;
+      object-fit: cover;
+      height: auto;
+      width: min(30rem, 90%);
+      margin-inline: auto;
+    }
+  }
+}

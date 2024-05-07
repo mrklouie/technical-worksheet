@@ -1,0 +1,24 @@
+@use "@/sass/globals/variables";
+@use "@/sass/globals/mixin";
+
+.form-wrapper {
+  display: block;
+  align-items: center;
+  gap: 1rem;
+  & > input {
+    @include mixin.inputField;
+    width: min(21rem, 100%);
+  }
+
+  & > button {
+    display: block;
+    @include mixin.button;
+    width: auto;
+    margin: 1rem 0;
+  }
+}
+
+#back {
+  display: block;
+  padding: 1rem 0;
+}

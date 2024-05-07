@@ -1,0 +1,15 @@
+@use "../../sass/globals/variables";
+@use "../../sass/globals/mixin";
+
+.register-form {
+  & > * + * {
+    margin-top: 1rem;
+  }
+  & > input {
+    @include mixin.inputField;
+  }
+
+  & > button {
+    @include mixin.button;
+  }
+}

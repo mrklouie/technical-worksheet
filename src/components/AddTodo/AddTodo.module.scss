@@ -1,0 +1,17 @@
+@use "../../sass/globals/variables";
+@use "../../sass/globals/mixin";
+
+.add-todo-container {
+  & > form {
+    & > input {
+      @include mixin.inputField;
+      width: auto;
+    }
+
+    & > button {
+      @include mixin.button;
+      width: auto;
+      margin-left: 0.5rem;
+    }
+  }
+}
