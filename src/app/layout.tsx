@@ -19,20 +19,23 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
 
-        <span id={styles["links-wrapper"]}>
+        <div id={styles["links-wrapper"]}>
           <span>
             GitHub Repo:
+            <a
+              href="https://github.com/mrklouie/technical-worksheet"
+              target="_blank"
+            >
+              https://github.com/mrklouie/technical-worksheet
+            </a>
+          </span>
+          <span>
+            Portfolio:
             <a href="http://mrklouie.tech/" target="_blank">
               http://mrklouie.tech/
             </a>
           </span>
-          <span>
-            GitHub Repo:
-            <a href="http://mrklouie.tech/" target="_blank">
-              http://mrklouie.tech/
-            </a>
-          </span>
-        </span>
+        </div>
       </body>
     </html>
   );
